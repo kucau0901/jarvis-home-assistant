@@ -1,0 +1,26 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Jarvis",
+        "description": "Jarvis watches the house and decides what to do; this sends it what changes, as it happens. Make a device token in Jarvis (Devices) with the scope “the house and cameras”, signed in as the first person (the one who set Jarvis up).",
+        "data": {
+          "url": "Jarvis's address",
+          "token": "Device token"
+        },
+        "data_description": {
+          "url": "Where Jarvis runs, e.g. https://jarvis.example.com",
+          "token": "Starts jdv1_. Jarvis shows it once, when it is made."
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Jarvis refused the token: check it, and that it has the scope “the house and cameras” and is a device of the first person's.",
+      "no_house": "Jarvis has no Home Assistant set up to watch: add its address and token in Jarvis's Settings first.",
+      "cannot_connect": "Jarvis could not be reached at that address."
+    },
+    "abort": {
+      "already_configured": "This Jarvis is already connected."
+    }
+  }
+}
